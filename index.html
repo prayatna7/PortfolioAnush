@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Professional portfolio website">
+<title>Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="icon" type="image/png" href="anush.png">
+<link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+<header>
+  <a class="logo">⚽ Portfolio</a>
+
+  <!-- Mobile Menu Trigger Components -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="hamburger">
+    <i class="fas fa-bars"></i>
+  </label>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button class="theme" onclick="toggleTheme()">🌙</button>
+  </nav>
+</header>
+
+
+<section class="hero">
+
+<div>
+<h1>Building Ideas Into Real Impact</h1>
+
+<p>
+Business Graduate • Educator • Technology Professional.
+Creating better systems, stronger communities, and modern digital experiences.
+</p>
+
+<a class="btn" href="#contact">Contact</a>
+<a class="btn secondary" href="#projects">Projects</a>
+
+<div class="hero-stats">
+<div><strong>3+</strong><br>Years Experience</div>
+<div><strong>10+</strong><br>Projects</div>
+<div><strong>100+</strong><br>Connections</div>
+</div>
+</div>
+<div class="card">
+
+<div class="pp">
+<img src="hero-photo.jpg">
+</div>
+<h2>Professional Profile</h2>
+
+<p class="muted">
+Business Studies graduate with experience across administration, education, digital systems, technology support, and community leadership.
+</p>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">
+About Me
+</h2>
+
+<div class="card">
+
+<p>
+I am a professional with interests in business management, education, technology, and innovation.
+My experience includes working with administrative processes, educational environments, and digital systems while maintaining a strong focus on communication and leadership.
+</p>
+
+<br>
+
+<p>
+Outside of work, I enjoy exploring emerging technology, AI tools, digital content, and community-building activities.
+My goal is to build projects that create practical impact and long-term value.
+</p>
+
+</div>
+
+</section>
+
+</section>
+
+<section id="about">
+<h2 class="title">About</h2>
+
+<div class="cards">
+<div class="card">
+Technology integration, education, leadership, and digital growth.
+</div>
+
+<div class="card">
+Building practical solutions with business and IT experience.
+</div>
+</div>
+
+</section>
+ <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="cards">
+            <div class="card">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>IT Department</h3>
+                <p><b>Company Registrar Nepal</b></p>
+                <p>Administered processing workflows and record databases.</p>
+                <span class="badge">2+ Years Experience</span>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <h3>Secondary Teacher</h3>
+                <p><b>Kathmandu</b></p>
+                <p>Instructing business workflows and class schedules.</p>
+                <span class="badge">2+ Years Experience</span>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-trophy"></i>
+                <h3>Deputy Regional Head</h3>
+                <p><b>Real Madrid Fan Club Nepal</b></p>
+                <p>Managing fan clubs verified officially by Real Madrid CF.</p>
+                <span class="badge">Official Affiliate</span>
+            </div>
+        </div>
+    </section>
+<section id="projects">
+<h2 class="title">Projects</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>School Management System</h3>
+<p>Connect Students, Teacher, & Management Online.</p>
+</div>
+
+<div class="card">
+<h3>Education Dashboard</h3>
+<p>Student workflow and analytics.</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<h2 class="title">Connect</h2>
+
+<div class="social">
+<a href="https://www.linkedin.com/in/anush-bhandari-b81bb0322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+">LinkedIn</a>
+<a href="https://www.facebook.com/share/1H84C4zDEL/">Facebook</a>
+<a href="
+https://www.instagram.com/theanushbhandari7?igsh=YWZxeng0bTB4N2Nw">Instagram</a>
+<a href="https://youtube.com/@theanushbhandari7?si=x4QfQldfKYvQr7EB">Youtube</a>
+<a href="
+https://www.tiktok.com/@theanushbhandari7?_r=1&_t=ZS-97EZjVnJpav">TikTok</a>
+</div>
+</section>
+
+<footer>
+©Copyright|2026 Anush Bhandari
+</footer>
+
+<script>
+
+function toggleTheme(){
+document.body.classList.toggle("dark");
+
+localStorage.setItem(
+"theme",
+document.body.classList.contains("dark")
+?"dark":"light"
+);
+}
+
+if(localStorage.getItem("theme")==="dark"){
+document.body.classList.add("dark");
+}
+
+const observer=
+new IntersectionObserver(
+entries=>{
+entries.forEach(
+e=>{
+if(e.isIntersecting)
+e.target.classList.add("show");
+}
+);
+}
+);
+
+document
+.querySelectorAll("section,.card")
+.forEach(el=>{
+el.classList.add("hidden");
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
